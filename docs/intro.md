@@ -28,7 +28,9 @@ Parfinanciero is more than just a technological solution—it represents a cultu
 
 This project is developed by Berners Lee Solutions and is composed of six specialized teams (cells), each responsible for a core service of the application. These services work together to create a unified, highly responsive platform.
 
-For further details, please refer to the subsequent documentation:
+For further details, please refer to the subsequent documentation
+
+Topics:
 - [Need and Justification](Need_and_Justification)
 - [Project Vision](Project_Vision)
 - [General Architecture](General_Architecture)
