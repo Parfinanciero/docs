@@ -42,7 +42,7 @@ jobs:
           ssh -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "rm -rf /var/www/parfinanciero/*"
           scp -P ${{ secrets.VPS_PORT }} -r build/* ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:/var/www/parfinanciero/
 
-      # Reiniciar Nginx (opcional)
+      # Reiniciar (recargar) Nginx
       - name: Restart Nginx
         run: |
-          ssh -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "sudo systemctl restart nginx"
+          ssh -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "sudo nginx -s reload"
