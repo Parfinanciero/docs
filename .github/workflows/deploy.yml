@@ -1,0 +1,45 @@
+name: Deploy Docusaurus
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clonar el repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Instalar dependencias y construir el proyecto
+      - name: Install dependencies and build
+        run: |
+          cd ParFinancieroTemplate
+          npm install
+          npm run build
+
+      # Añadir el host SSH a known_hosts usando el puerto definido
+      - name: Add SSH Key to Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_IP }} >> ~/.ssh/known_hosts
+
+      # Configurar la clave SSH para el acceso
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      # Eliminar los archivos actuales en el VPS y copiar los nuevos en /var/www/parfinanciero
+      - name: Deploy to VPS
+        run: |
+          ssh -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "rm -rf /var/www/parfinanciero/*"
+          scp -P ${{ secrets.VPS_PORT }} -r ParFinancieroTemplate/build/* ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:/var/www/parfinanciero/
+
+      # Reiniciar Nginx (opcional)
+      - name: Restart Nginx
+        run: |
+          ssh -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "sudo systemctl restart nginx"
