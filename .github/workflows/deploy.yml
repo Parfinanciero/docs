@@ -3,7 +3,6 @@ name: Deploy Docusaurus
 on:
   push:
     branches:
-      - develop
       - main
 
 jobs:
