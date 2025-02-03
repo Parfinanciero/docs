@@ -14,10 +14,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Instalar dependencias y construir el proyecto
+      # (Opcional) Listar archivos para confirmar la estructura del repositorio
+      - name: List repository files
+        run: ls -la
+
+      # Instalar dependencias y construir el proyecto (en la raíz)
       - name: Install dependencies and build
         run: |
-          cd ParFinancieroTemplate
           npm install
           npm run build
 
@@ -37,7 +40,7 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "rm -rf /var/www/parfinanciero/*"
-          scp -P ${{ secrets.VPS_PORT }} -r ParFinancieroTemplate/build/* ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:/var/www/parfinanciero/
+          scp -P ${{ secrets.VPS_PORT }} -r build/* ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:/var/www/parfinanciero/
 
       # Reiniciar Nginx (opcional)
       - name: Restart Nginx
