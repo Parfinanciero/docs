@@ -2,46 +2,34 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Parfinanciero
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to **Parfinanciero**, an innovative financial analysis platform powered by Artificial Intelligence (AI). Designed to empower users with advanced financial management and planning tools, Parfinanciero offers personalized insights, real-time financial projections, and actionable recommendations to enhance decision-making.
 
-## Getting Started
+## Overview
 
-Get started by **creating a new site**.
+Parfinanciero is more than just a technological solution—it represents a cultural shift towards a healthier relationship with personal finance. By integrating cutting-edge AI with dynamic financial analytics, the platform simplifies complex tasks, educates its users, and facilitates future-oriented planning.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Key Features
 
-### What you'll need
+- **Personalized Financial Analysis:** Tailor-made insights and recommendations based on individual financial data.
+- **Real-Time Projections:** Advanced AI-driven forecasting to visualize future financial scenarios.
+- **Interactive Dashboard:** Business Intelligence (BI) tools that provide clear metrics and data visualizations.
+- **Secure and Scalable:** Built on robust microservices architecture with secure integration protocols.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Technology Overview
 
-## Generate a new site
+- **Backend Services:** Primarily developed using **Spring Boot**.
+- **AI Projections Cell:** Developed in **Python**.
+- **Front-End:** Built with **React** and **Material-UI (MUI)**.
+- **AI Engine:** Powered by **Gemini 1.5 flash** for predictive analytics and personalized suggestions.
 
-Generate a new Docusaurus site using the **classic template**.
+## Project Scope
 
-The classic template will automatically be added to your project after you run the command:
+This project is developed by Berners Lee Solutions and is composed of six specialized teams (cells), each responsible for a core service of the application. These services work together to create a unified, highly responsive platform.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+For further details, please refer to the subsequent documentation:
+- [Need and Justification](Need_and_Justification)
+- [Project Vision](Project_Vision)
+- [General Architecture](General_Architecture)
+- [Integration and API Contracts](Integration_and_APIContracts)
