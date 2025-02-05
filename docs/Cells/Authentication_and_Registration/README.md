@@ -1,30 +1,30 @@
-# Autenticación y Registro - Parfinanciero
+# Authentication and Registration - Parfinanciero
 
-## 💡 Descripción General
-Este microservicio es responsable de la autenticación y registro de usuarios en la plataforma **Parfinanciero**. Proporciona soporte para autenticación con Google y Microsoft mediante **OAuth 2.0** e implementa la gestión de usuarios en **PostgreSQL**. La integración segura con los demás microservicios se logra a través de **tokens JWT**.
-
----
-
-## 📈 Objetivo del Servicio
-- Permitir a los usuarios autenticarse de manera segura mediante **OAuth 2.0** con **Google y Microsoft**.
-- Gestionar el registro y almacenamiento de usuarios en **PostgreSQL**.
-- Implementar una integración segura con otros microservicios a través de **tokens JWT**.
-- Desarrollar un middleware de seguridad para validar accesos y roles.
+## 💡 General Description
+This microservice is responsible for user authentication and registration within the **Parfinanciero** platform. It provides support for authentication with **Google and Microsoft** via **OAuth 2.0** and implements user management in **PostgreSQL**. Secure integration with other microservices is achieved through **JWT tokens**.
 
 ---
 
-## ⚙️ Funcionalidades Clave
-- **Registro y autenticación** mediante Google y Microsoft.
-- **Gestión de usuarios** en PostgreSQL.
-- **Generación y validación de tokens JWT** para autenticación segura.
-- **Endpoints de autenticación y manejo de sesiones**.
-- **Middleware de seguridad** para validación de roles y permisos.
+## 📈 Service Objective
+- Allow users to securely authenticate via **OAuth 2.0** with **Google and Microsoft**.
+- Manage user registration and storage in **PostgreSQL**.
+- Implement secure integration with other microservices through **JWT tokens**.
+- Develop a security middleware to validate access and roles.
 
 ---
 
-## 🌐 Importancia dentro del Ecosistema de Parfinanciero
-Este microservicio es **esencial** para el funcionamiento seguro de la plataforma **Parfinanciero**, ya que:
-- **Controla el acceso** de usuarios y gestiona sus permisos.
-- **Asegura la integración segura** con otros microservicios.
-- **Facilita la gestión de roles** dentro del sistema.
+## ⚙️ Key Features
+- **User registration and authentication** via Google and Microsoft.
+- **User management** in PostgreSQL.
+- **JWT token generation and validation** for secure authentication.
+- **Authentication endpoints and session management**.
+- **Security middleware** for role and permission validation.
+
+---
+
+## 🌐 Importance within the Parfinanciero Ecosystem
+This microservice is **essential** for the secure operation of the **Parfinanciero** platform, as it:
+- **Controls user access** and manages their permissions.
+- **Ensures secure integration** with other microservices.
+- **Facilitates role management** within the system.
 
