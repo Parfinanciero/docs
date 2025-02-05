@@ -19,7 +19,6 @@ Este microservicio es responsable de la autenticación y registro de usuarios en
 - **Generación y validación de tokens JWT** para autenticación segura.
 - **Endpoints de autenticación y manejo de sesiones**.
 - **Middleware de seguridad** para validación de roles y permisos.
-
 ---
 
 ## 🌐 Importancia dentro del Ecosistema de Parfinanciero
