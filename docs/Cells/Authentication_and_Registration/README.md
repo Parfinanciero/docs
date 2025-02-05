@@ -28,11 +28,3 @@ Este microservicio es **esencial** para el funcionamiento seguro de la plataform
 - **Asegura la integración segura** con otros microservicios.
 - **Facilita la gestión de roles** dentro del sistema.
 
----
-
-## 📅 Entregables
-- API funcional para autenticación y registro.
-- Integración con Google y Microsoft via OAuth 2.0.
-- Documentación técnica sobre flujos de autenticación.
-
----
