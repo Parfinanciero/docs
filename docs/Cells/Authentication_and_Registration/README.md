@@ -26,6 +26,5 @@ Este microservicio es responsable de la autenticación y registro de usuarios en
 Este microservicio es **esencial** para el funcionamiento seguro de la plataforma **Parfinanciero**, ya que:
 - **Controla el acceso** de usuarios y gestiona sus permisos.
 - **Asegura la integración segura** con otros microservicios.
-
 - **Facilita la gestión de roles** dentro del sistema.
 
